@@ -31,7 +31,7 @@ class Database implements AuditDriver
             return false;
         }
 
-        return Audit::create();
+        return Audit::create($d);
     }
 
     /**
