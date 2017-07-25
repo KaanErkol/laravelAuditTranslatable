@@ -77,7 +77,14 @@ class Auditor extends Manager implements AuditorContract
             return;
         }
 
-        if ($audit = $driver->audit($model)) {
+        
+        $audit = $driver->audit($model);
+
+        if(!$audit){
+            return;
+        }
+
+        if ($audit) {
             $driver->prune($model);
         }
 
