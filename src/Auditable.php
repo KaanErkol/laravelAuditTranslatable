@@ -222,7 +222,7 @@ trait Auditable
         $this->{$method}($old, $new);
 
         if(!count($old) && !count($new)){
-            return false;
+            return [];
         }
 
         return $this->transformAudit([
