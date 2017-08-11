@@ -31,8 +31,7 @@ class Database implements AuditDriver
             return false;
         }
 
-        var_dump($d);
-        die();
+        
         return Audit::create($d);
     }
 
